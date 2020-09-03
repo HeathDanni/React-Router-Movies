@@ -34,9 +34,16 @@ const App = () => {
       <div>
         <Link to="/">Home</Link>
         <Link to="/movies">Movies</Link>
+      
+      <Switch>
+        <Route path="/movies">
+          <Movie/>
+          </Route>
+        <Route exact path="/">
+          <MovieList movies={movieList}/>
+          </Route>   
+      </Switch>
 
-        <Route exact path="/" component={MovieList}/>
-        <Route path="/movies" component={Movie}/>
       </div>
     </div>
 
