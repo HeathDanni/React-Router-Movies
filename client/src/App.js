@@ -35,11 +35,8 @@ const App = () => {
           <Route path="/movies/:id" render={(props) => {
             return <Movie id={movieList.id}/>}}/>
           <Route path= "/" render={(props) => {
-            return <MovieList movies={movieList}/> }}/>
+            return <MovieList movies={movieList} id={movieList.id}/> }}/>
         </Switch>
-  {/* <Route path="/movies/:id" */}
-        {/* <Route path="/movies/:id"><Movie id={movieList.id}/></Route> */}
-
       </div>
     </div>
   );
