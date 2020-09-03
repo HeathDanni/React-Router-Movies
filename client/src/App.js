@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import Movie from './Movies/Movie'
 import MovieList from './Movies/MovieList';
 import SavedList from './Movies/SavedList';
 
@@ -32,11 +33,12 @@ const App = () => {
       <SavedList list={[ /* This is stretch */]} />
       <div>
         <Link to="/">Home</Link>
-        <Link to="/movies">Movie</Link>
+        <Link to="/movies">Movies</Link>
+
+        <Route exact path="/" component={MovieList}/>
+        <Route path="/movies" component={Movie}/>
       </div>
     </div>
-
-    {/* <Route path="/" component={MovieList}/> */}
 
     </Router>
   );
